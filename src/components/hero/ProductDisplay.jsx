@@ -60,7 +60,7 @@ const ProductDisplay = ({product}) => {
             <div className={styles.productCategory}><span>Category: </span>{product.category}</div>
             <div className={styles.productTags}><span>Tags: </span>Modern, Fashion, Trendy</div>
             <div className={styles.checkout}>
-                <Button to="/cart" inverted={true}>Checkout</Button>
+                <Button to="/cart" onClick={() => {window.scrollTo(0,0)}} inverted={true}>Checkout</Button>
             </div>
         </div>
     </div>
