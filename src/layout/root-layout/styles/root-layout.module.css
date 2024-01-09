@@ -1,0 +1,123 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--main-color);
+    padding: 20px 60px;
+    background-color: var(--text-color);
+    box-shadow: 0px 5px 20px 0px var(--text-color);
+    position: relative;
+}
+header nav{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+header nav a{
+    transition: var(--main-transition);
+    color: var(--header-text-color);
+}
+header nav a:hover,
+header nav a:focus{
+    color: var(--main-color);
+    font-size: 24px;
+}
+header nav:has(a:hover) a:not(:hover){
+    color: var(--header-text-color);
+    font-size: 16px;
+}
+header nav a.active{
+    font-size: 20px !important;
+}
+header .loginNCart{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+header .loginNCart a:active{
+    background-color: var(--darker-main-color);
+}
+header .loginNCart .cartIcon{
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--header-text-color);
+    position: relative;
+}
+header .loginNCart .cartIcon span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%,-50%);
+    background-color: red;
+    border-radius: 10px;
+    /* width: 20px; */
+    height: 20px;
+    width: 30px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+footer .socialLinks,
+footer .otherLinks{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+footer .otherLinks{
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .socialLinks{
+    justify-content: space-between;
+    font-size: 26px;
+}
+footer .copyRights a{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@media (max-width: 767px) {
+    header{
+        padding: 20px;
+    }
+    header nav{
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        background-color: var(--text-color);
+        width: 100px;
+        padding-bottom: 5px;
+        border-top: 1px solid var(--main-color);
+        border-bottom: 1px solid var(--main-color);
+        height: 35px;
+        overflow: hidden;
+        transition: var(--main-transition);
+        z-index: 100;
+        display: none;
+    }
+    header nav:hover{
+        height: 120px;
+    }
+    header nav:hover a{
+        width: 100%;
+        text-align: center;
+    }
+    header nav a.active{
+        background-color: red !important;
+    }
+    header .loginNCart{
+        gap: 10px
+    }
+}

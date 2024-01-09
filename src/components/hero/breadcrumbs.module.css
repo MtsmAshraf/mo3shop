@@ -1,0 +1,19 @@
+.breadcrumbs{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.breadcrumbs a{
+    text-decoration: underline; 
+}
+@media (max-width: 992px) {
+    .breadcrumbs{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .breadcrumbs{
+        margin-left: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

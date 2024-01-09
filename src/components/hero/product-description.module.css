@@ -1,0 +1,38 @@
+.productDescription{
+    font-size: 14px;
+    padding: 20px 60px;
+}
+@media (max-width: 992px) {
+    .productDescription{
+        padding: 20px 40px;
+    }
+}
+.productDescription .descriptionHeader{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.productDescription input{
+    appearance: none;
+    margin: 0;
+}
+.productDescription div label{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    padding: 5px 10px;
+    width: 40px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+.productDescription div:has(>input:checked) label,
+.productDescription div label:hover{
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.productDescription .description{
+    width: 70%;
+    font-size: 14px;
+}

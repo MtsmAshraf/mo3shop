@@ -1,0 +1,62 @@
+.shop > div:has(.left){
+    height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 100px 150px;
+}
+.shop > div:has(.left) .left,
+.shop > div:has(.left) .right{
+    flex: 1;
+}
+.shop > div:has(.left) .left > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.shop > div:has(.left) .left > div img{
+    width: 60px;
+}
+.shop > div:has(.left) .left p{
+    font-size: 60px;
+}
+.shop > div:has(.left) .left .lastP{
+    margin-bottom: 30px;
+    display: block;
+}
+.shop > div:has(.left) .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop > div:has(.left) .right img{
+    width: 300px;
+    border-bottom: 1px solid var(--text-color);
+}
+@media (max-width: 992px) {
+    .shop > div:has(.left){
+        height: fit-content;
+        flex-direction: column;
+    }
+}
+@media (max-width: 500px) {
+    .shop > div:has(.left) .left{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .shop > div:has(.left) .left > *{
+        text-align: center;
+    }
+    .shop > div:has(.left) .left > div{
+        justify-content: center;
+    }
+    .shop > div:has(.left) .left p{
+        font-size: 40px;
+    }
+    .shop > div:has(.left) .right{
+        width: 300px;
+    }
+}

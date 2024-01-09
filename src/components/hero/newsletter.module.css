@@ -1,0 +1,42 @@
+.newsletter{
+    text-align: center;
+    width: 80%;
+    margin: 50px auto 30px;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    padding: 40px 20px;
+}
+.newsletter span{
+    color: aliceblue;
+}
+@media (max-width: 767px) {
+    .newsletter h1{
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    .newsletter span{
+        font-size: 16px;
+    }
+}
+.newsletter form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.newsletter form input{
+    padding: 10px 20px;
+    color: var(--text-color);
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    transition: var(--main-transition);
+}
+.newsletter form input:focus{
+    background-color: var(--main-color);
+}
+@media (max-width: 600px) {
+    .newsletter form{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

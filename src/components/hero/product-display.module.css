@@ -1,0 +1,164 @@
+.productDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: calc(100vh - 200px);
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.productDisplay .productImgs{ 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 100%;
+}
+.productDisplay .productImgs > div{ 
+    overflow: hidden;
+}
+.productDisplay .productImgs > div.main{ 
+    grid-area: 1/2/5/5; 
+}
+.productDisplay .productImgs > div:not(.main){
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.productDisplay .productImgs > div:not(.main) img{
+    scale: 1.1;
+}
+.productDisplay .productImgs > div.main{
+    width: 450px;
+    height: 450px;
+}
+@media (max-width: 670px) {
+    .productDisplay .productImgs > div.main{ 
+        grid-area: 1/1/4/5; 
+        width: 350px;
+        height: 350px;
+    }
+}
+.productDisplay .productImgs > div img{
+    width: 100%;
+}
+.productDisplay .productDetails{
+    padding-right: 100px;
+    height: 100%;
+}
+@media (max-width: 1200px) {
+    .productDisplay{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .productDisplay .productDetails{
+        padding-right: 40px;
+    }
+}
+@media (max-width: 992px) {
+    .productDisplay{
+        flex-direction: column;
+    }
+}
+.productDisplay .productDetails h2{
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.productDisplay .productDetails .productRatings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: fit-content;
+    font-size: 12px;
+}
+.productDisplay .productDetails .productPrices{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.productDisplay .productDetails .productPrices .oldPrice{
+    text-decoration: line-through;
+}
+.productDisplay .productDetails .productDescription{
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}  
+.productDisplay .productDetails .sizesLabel{
+    font-size: 14px;
+}
+.productDisplay .productDetails .ProductSizes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.productDisplay .productDetails .ProductSizes input{
+    margin: 0;
+    appearance: none;
+}
+.productDisplay .productDetails .ProductSizes label{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    padding: 5px 10px;
+    width: 40px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}    
+.productDisplay .productDetails .ProductSizes div:has(input:checked) label,
+.productDisplay .productDetails .ProductSizes label:hover{
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.productDisplay .productDetails .addToCart{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+    font-weight: bold;
+    padding: 5px 20px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: var(--main-transition);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.productDisplay .productDetails .addToCart:focus,
+.productDisplay .productDetails .addToCart:active,
+.productDisplay .productDetails .addToCart:hover{
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+.productDisplay .productDetails .productCategory,
+.productDisplay .productDetails .productTags{
+    font-size: 14px;
+}
+.productDisplay .productDetails .productCategory span,
+.productDisplay .productDetails .productTags span{
+    font-weight: bold;
+}
+.productDisplay .productDetails .productCategory{
+    margin-top: 10px;
+}
+.productDisplay .productDetails .productTags{
+    margin-bottom: 20px;
+}
+.productDisplay .productDetails .checkout{
+    background-color: var(--text-color);
+    width: fit-content;
+}

@@ -1,0 +1,87 @@
+.loginSignUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.loginSignUp form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    padding: 20px;
+    box-shadow: 5px 5px 33px -4px var(--text-color);
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.loginSignUp form h4{
+    font-size: 22px;
+    width: fit-content;
+    position: relative;
+    margin-bottom: 30px;
+}
+.loginSignUp form h4::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80%;
+    height: 1px;
+    background-color: var(--main-color);
+}
+.loginSignUp form input{
+    width: 100%;
+    padding: 10px;
+    transition: var(--main-transition);
+}
+.loginSignUp form input:focus{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.loginSignUp form button{
+    background-color: transparent;
+    color: var(--main-color);
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    font-weight: bold;
+    padding: 5px 20px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.loginSignUp form button:focus,
+.loginSignUp form button:active,
+.loginSignUp form button:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+.loginSignUp form span{
+    font-size: 14px;
+    align-self: self-start;
+}
+.loginSignUp form span a{
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: underline;
+    padding-left: 5px;
+}
+.loginSignUp form .policyTerm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+.loginSignUp form .policyTerm input{
+    flex: 1;
+    accent-color: var(--main-color);
+    background-color: rebeccapurple;
+}
