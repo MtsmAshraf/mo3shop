@@ -91,24 +91,25 @@ footer .copyRights a{
         padding: 20px;
     }
     header nav{
-        flex-direction: column;
+        /* flex-direction: column; */
         position: absolute;
         left: 50%;
         top: 100%;
         transform: translateX(-50%);
         background-color: var(--text-color);
-        width: 100px;
-        padding-bottom: 5px;
+        /* width: 100px; */
+        padding: 5px 10px;
         border-top: 1px solid var(--main-color);
         border-bottom: 1px solid var(--main-color);
         height: 35px;
         overflow: hidden;
         transition: var(--main-transition);
         z-index: 100;
-        display: none;
+        /* display: none; */
+
     }
     header nav:hover{
-        height: 120px;
+        /* height: 120px; */
     }
     header nav:hover a{
         width: 100%;

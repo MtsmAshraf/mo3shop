@@ -40,6 +40,7 @@
         grid-area: 1/1/4/5; 
         width: 350px;
         height: 350px;
+        max-width: 100%;
     }
 }
 .productDisplay .productImgs > div img{
@@ -51,11 +52,12 @@
 }
 @media (max-width: 1200px) {
     .productDisplay{
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .productDisplay .productDetails{
         padding-right: 40px;
+        padding-left: 40px;
     }
 }
 @media (max-width: 992px) {
